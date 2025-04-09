@@ -1,0 +1,3 @@
+{
+  "audit_log_file": "/var/log/audit/audit.log"
+}

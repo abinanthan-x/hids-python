@@ -1,0 +1,8 @@
+{
+  "rules": [
+    {
+      "name": "rule_ls",
+      "pattern": "ls"
+    }
+  ]
+}
