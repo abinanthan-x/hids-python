@@ -2,6 +2,7 @@ import re
 import time
 import json
 import os
+from jira import create_jira_issue
 
 CONFIG_FILE = "config.json"
 RULES_FILE = "rules.json"
@@ -47,6 +48,13 @@ def monitor_audit_log(config, rules):
                         for rule in rules:
                             if matches_rule(command, rule):
                                 print(f"[ALERT] Rule matched: {rule['name']} | Command: {command}")
+                                # When a rule is matched
+                                summary = f"Suspicious Command Detected: {rule['name']}"
+                                description = f"Command: {command}\nMatched Rule: {rule['name']}"
+
+                                # Create the task in JIRA
+                                jira_response = create_jira_issue(summary, description)
+                                print(jira_response)
         except Exception as e:
             print(f"[ERROR] {e}")
 
