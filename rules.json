@@ -25,10 +25,6 @@
       "pattern":"python"
     },
     {
-      "name":"rule_passwd_change",
-      "pattern":"passwd"
-    },
-    {
       "name":"rule_python3_exec",
       "pattern":"python3"
     }
