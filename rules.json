@@ -1,8 +1,36 @@
 {
   "rules": [
     {
-      "name": "rule_ls",
-      "pattern": "ls"
+      "name": "rule_wget",
+      "pattern": "wget"
+    },
+    {
+      "name": "rule_curl",
+      "pattern": "curl"
+    },
+    {
+      "name": "rule_sudo_suspicious",
+      "pattern": "sudo"
+    },
+    {
+      "name":"rule_nc",
+      "pattern":"nc"
+    },
+    {
+      "name":"rule_useradd",
+      "pattern":"useradd"
+    },
+    {
+      "name":"rule_python_exec",
+      "pattern":"python"
+    },
+    {
+      "name":"rule_passwd_change",
+      "pattern":"passwd"
+    },
+    {
+      "name":"rule_python3_exec",
+      "pattern":"python3"
     }
   ]
 }
